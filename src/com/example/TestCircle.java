@@ -35,7 +35,7 @@ public class TestCircle {
             circle.setRadius(-2.0); // Попытка установить отрицательное значение радиуса
             System.out.println("testSetRadius: FAILURE: Expected an IllegalArgumentException to be thrown");
         } catch (IllegalArgumentException e) {
-            if (!compareDouble(circle.getRadius(), 1)) { // Проверяем, что радиус не изменился
+            if (compareDouble(circle.getRadius(), 2)) { // Проверяем, что радиус не изменился
                 System.out.println("testSetRadius: OK");
             } else {
                 System.out.println("testSetRadius: FAILURE: Radius was expected to remain unchanged");
